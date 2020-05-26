@@ -1,0 +1,32 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.war
+
+
+*.iml
+.classpath
+.gradletasknamecache
+.DS_Store
+
+.idea/
+.mvn/
+target/
+classes/
+.settings/
+.project/
+.project
+.gradle/
+*build/
+mvnw
+mvnw.cmd
+out
+
+bootstrap-debug.yml
