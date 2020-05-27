@@ -2,29 +2,41 @@ package cn.mor.eventbus.body;
 
 import cn.mor.eventbus.event.Event;
 
-public class SimpleEvent extends Event<SimpleBody> {
+public class SimpleEvent {
 
 
     public static final String NAME = "simpleEvent:simple";
 
-    @Override
+    private String name ;
+
+    private int age;
+
+    public static SimpleEvent valueOf(String name, int age) {
+        SimpleEvent result = new SimpleEvent();
+        result.name = name;
+        result.age = age;
+        return result;
+    }
+    
+    public static Event<SimpleEvent> valueOf(SimpleEvent simpleEvent) {
+        return new Event<SimpleEvent>(NAME, simpleEvent);
+    }
+
+
+
     public String getName() {
-        return NAME;
+        return name;
     }
 
-    public SimpleEvent(String name) {
-        super(name);
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public SimpleEvent(String name, SimpleBody body) {
-        super(name, body);
-
+    public int getAge() {
+        return age;
     }
 
-
-    public static Event<SimpleEvent> valueOf(SimpleBody body) {
-        return new Event<SimpleEvent>(NAME, new SimpleEvent(NAME,body));
+    public void setAge(int age) {
+        this.age = age;
     }
-
-
 }

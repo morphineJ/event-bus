@@ -1,7 +1,6 @@
 package cn.mor.eventbus.service;
 
 
-import cn.mor.eventbus.body.SimpleBody;
 import cn.mor.eventbus.body.SimpleEvent;
 import cn.mor.eventbus.event.EventBus;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ public class PostEvent {
 
 
     public void test(){
-       eventBus.post(SimpleEvent.valueOf(SimpleBody.valueOf("11",22)));
+       eventBus.post(SimpleEvent.valueOf(SimpleEvent.valueOf("11",22)));
     }
 
 }
