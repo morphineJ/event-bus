@@ -67,7 +67,9 @@ public class EventBusImpl implements EventBus, ApplicationListener<ContextClosed
             try {
                 receiver.onEvent(event);
             } catch (ClassCastException e) {
+
             } catch (Throwable t) {
+
             }
         }
 

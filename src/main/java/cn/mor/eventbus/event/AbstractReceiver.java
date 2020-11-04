@@ -19,7 +19,6 @@ public abstract class AbstractReceiver<T> implements Receiver<T> {
 
     }
 
-
     @Autowired
     protected EventBus eventBus;
 
